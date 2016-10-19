@@ -61,11 +61,11 @@ if has('vim_starting')
     if &compatible
           set nocompatible
     endif
-    set runtimepath+=/Users/jabaraster/.vim/bundle/neobundle.vim/
+    set runtimepath+=/Users/iiyamaNaoki/.vim/bundle/neobundle.vim/
 endif
               
 " NeoBundle設定の開始
-call neobundle#begin(expand('/Users/jabaraster/.vim/bundle'))
+call neobundle#begin(expand('/Users/iiyamaNaoki/.vim/bundle'))
 
 " NeoBundleのバージョンをNeoBundle自身で管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -82,3 +82,10 @@ filetype plugin indent on
 
 " vim起動時に未インストールのプラグインをインストールする
 NeoBundleCheck
+
+"tmux setting
+"http://takegue.hatenablog.com/entry/2015/01/26/031231
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-j> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-j> :TmuxNavigateRight<cr>
