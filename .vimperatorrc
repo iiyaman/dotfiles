@@ -7,12 +7,8 @@
 set hintchars=sadfjklewcmpgh
 
 " shift+jkに矢印キー上下を割り当て
-noremap J <Down>
-noremap K <Up>
-
-" jkに全ページスクロールを割り当て
-noremap j <Space>
-noremap k <S-Space>
+noremap j <Down>
+noremap k <Up>
 
 " shift+hlにタブ移動を割り当て
 noremap L <C-n>
@@ -29,33 +25,30 @@ set previouspattern=\bprev|previous\b,prev,^前(の)?ページ,前へ,\b前.*,\b
 " ---------------
 
 
-"補完先の指定
+"補完
 js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
 
 "コマンドライン利用時自動英数化
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
-
 " 入力欄に自動フォーカスしない
 set focuscontent
+
 " qmarks
 " 使用方法
 " g o g で現在タブでgithubを開く
 " g n g で新規タブでgithubを開く
-
+" g w g で新規ウィンドウでgithubを開く
 qmark g https://github.com/iiyaman
 qmark m https://mail.google.com/
 qmark c https://calendar.google.com/calendar/
-qmark n http://www.nicovideo.jp/ranking/fav/hourly/game
-qmark t https://trello.com/
+qmark n http://www.nicovideo.jp/ranking/fav/hourly/jikkyo
+qmark t https://twitter.com/
 qmark y https://www.youtube.com/ 
 qmark q http://qiita.com/ 
 qmark w https://twitter.com/
-qmark z https://zaim.net/home?spia_so=1
-
 
 " ---------------
-
 " ブラウザ上でExモードを起動し,
 " source ~/.vimperator
 " と打つか
