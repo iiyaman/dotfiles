@@ -14,11 +14,29 @@ set showcmd
 
 " 見た目系
 " 行番号を表示
-set number
+set number 
 "現在の行を強調表示
 set cursorline
-" インデントはスマートインデント
-set smartindent
+"indentの設定
+filetype plugin indent on
+
+" soft tabを有効に
+set expandtab
+" オートインデントを有効に
+set autoindent
+" インデント幅を2文字に
+set tabstop=2 shiftwidth=2 softtabstop=2
+
+set laststatus=2
+" ノーマルモードとinsertモードでステータスバーの色を変える
+" normal mode : lightblue / insert mode: green
+au InsertEnter * hi StatusLine ctermfg=Black ctermbg=lightblue cterm=none
+au InsertLeave * hi StatusLine ctermfg=Black ctermbg=Green cterm=none
+
+" カラースキーマ
+syntax on 
+colorscheme koehler 
+
 " 括弧入力時の対応する括弧を表示
 set showmatch
 " ステータスラインを常に表示
@@ -28,6 +46,11 @@ set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
+
+" 入力系
+" enter で改行挿入
+nmap <CR> o<ESC>
+
 
 
 " Tab系
@@ -55,6 +78,10 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" ノーマルモード移行時半角入力へ自動以降
+" うまくいかなかったのでKarabinerで実現
+set imdisable
+
 "Neobundle Setting
 " 起動時にruntimepathにNeoBundleのパスを追加する
 if has('vim_starting')
@@ -63,8 +90,8 @@ if has('vim_starting')
     endif
     set runtimepath+=/Users/iiyamaNaoki/.vim/bundle/neobundle.vim/
 endif
-              
-" NeoBundle設定の開始
+
+
 call neobundle#begin(expand('/Users/iiyamaNaoki/.vim/bundle'))
 
 " NeoBundleのバージョンをNeoBundle自身で管理する
