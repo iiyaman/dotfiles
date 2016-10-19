@@ -1,5 +1,5 @@
 "3.8.2 (created: 2014/02/13 23:52:43)
-"updated2016/09/27
+"updated2016/10/19
 
 " vim: set ft=vimperator:
 
@@ -31,6 +31,10 @@ set previouspattern=\bprev|previous\b,prev,^前(の)?ページ,前へ,\b前.*,\b
 
 "補完先の指定
 js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
+
+"コマンドライン利用時自動英数化
+style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
 
 " 入力欄に自動フォーカスしない
 set focuscontent
