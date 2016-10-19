@@ -1,6 +1,4 @@
-"setting
-"文字コードをUFT-8に設定
-set fenc=utf-8
+"setting "文字コードをUFT-8に設定 set fenc=utf-8
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
@@ -34,8 +32,10 @@ au InsertEnter * hi StatusLine ctermfg=Black ctermbg=lightblue cterm=none
 au InsertLeave * hi StatusLine ctermfg=Black ctermbg=Green cterm=none
 
 " カラースキーマ
-syntax on 
-colorscheme koehler 
+syntax enable
+
+
+
 
 " 括弧入力時の対応する括弧を表示
 set showmatch
@@ -101,6 +101,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " 下記は unite.vimというプラグインをインストールする例
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'altercation/vim-colors-solarized'
 
 " NeoBundle設定の終了
 call neobundle#end()
@@ -109,6 +110,7 @@ filetype plugin indent on
 
 " vim起動時に未インストールのプラグインをインストールする
 NeoBundleCheck
+
 
 "tmux setting
 "http://takegue.hatenablog.com/entry/2015/01/26/031231
