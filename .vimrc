@@ -1,4 +1,6 @@
-"setting "文字コードをUFT-8に設定 set fenc=utf-8
+
+"文字コードをUFT-8に設定
+ set fenc=utf-8
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
@@ -32,8 +34,9 @@ au InsertEnter * hi StatusLine ctermfg=Black ctermbg=lightblue cterm=none
 au InsertLeave * hi StatusLine ctermfg=Black ctermbg=Green cterm=none
 
 " カラースキーマ
-syntax enable
-
+syntax on 
+colorscheme ron
+":Unite colorscheme -auto-preview でカラースキーマの一覧表示
 
 
 
@@ -88,20 +91,20 @@ if has('vim_starting')
     if &compatible
           set nocompatible
     endif
-    set runtimepath+=/Users/iiyamaNaoki/.vim/bundle/neobundle.vim/
+    set runtimepath+=/Users/iiyamaNaoki/dotfiles/.vim/bundle/neobundle.vim/
+
 endif
 
 
-call neobundle#begin(expand('/Users/iiyamaNaoki/.vim/bundle'))
+call neobundle#begin(expand('/Users/iiyamaNaoki/dotfiles/.vim/bundle'))
 
 " NeoBundleのバージョンをNeoBundle自身で管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" インストールしたいプラグインを記述
-" 下記は unite.vimというプラグインをインストールする例
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'ujihisa/unite-colorscheme'
+
 
 " NeoBundle設定の終了
 call neobundle#end()
