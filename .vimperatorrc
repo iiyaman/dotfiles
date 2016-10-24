@@ -1,7 +1,10 @@
 "3.8.2 (created: 2014/02/13 23:52:43)
-"updated2016/10/19
+"updated2016/10/20
 
 " vim: set ft=vimperator:
+
+" デフォルトの検索エンジン
+set defsearch=google
 
 "FollowHint キー指定
 set hintchars=sadfjklewcmpgh
@@ -33,6 +36,20 @@ style -name commandline-ime chrome://* #liberator-commandline-command input {ime
 
 " 入力欄に自動フォーカスしない
 set focuscontent
+
+"ステータスラインの表示
+set statuslinevisibility=visible
+
+" Ctrl+r で再起動
+map <C-r> :restart<CR>
+
+" R で.vimperatorrcを再読込み
+map R :source ~/.vimperatorrc<CR>
+
+" ヒント表示色
+highlight Hint font-family: Arial; font-size: 12px; font-wight: bold;  text-transform: uppercase; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;  color: #FFFF00;
+highlight HintElem color: gray; background-color: #a1e4e6;
+highlight HintActive color: black; background-color: #ff8700;
 
 " qmarks
 " 使用方法
