@@ -7,7 +7,9 @@
 set defsearch=google
 
 "FollowHint キー指定
-set hintchars=sadfjklewcmpgh
+set hintchars=sadfwerxcv
+
+" wadfjklewcmpgh
 
 " shift+jkに矢印キー上下を割り当て
 noremap j <Down>
