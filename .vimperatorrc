@@ -7,7 +7,7 @@
 set defsearch=google
 
 "FollowHint キー指定
-set hintchars=sadfwerxcv
+set hintchars=sadfwergt
 
 " wadfjklewcmpgh
 
