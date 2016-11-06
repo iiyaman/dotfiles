@@ -68,6 +68,8 @@ set shiftwidth=4
 " enter で改行挿入
 nmap <CR> o<ESC>
 
+set undolevels=1000
+
 " ペースト設定
 if &term =~ "xterm"
      let &t_SI .= "\e[?2004h"
