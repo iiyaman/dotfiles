@@ -25,8 +25,8 @@ noremap l <C-i>
 
 " ---------------
 " [ or ] で次のページ, 前のページと書かれたリンクに遷移する
-set nextpattern=\bnext\b,\bmore\b,next,^次(の)?ページ,次へ,\b次.*,→\b,^>$,^(>>|≫)$,^(>|≫),(>|≫)$
-set previouspattern=\bprev|previous\b,prev,^前(の)?ページ,前へ,\b前.*,\b←,^<$,^(<<|≪)$,^(<|≪),(<|≪)
+set nextpattern=\bnext\b,\bmore\b,next,^次(の)?ページ,次の問題,次へ,\b次.*,→\b,^>$,^(>>|≫)$,^(>|≫),(>|≫)$
+set previouspattern=\bprev|previous\b,prev,^前(の)?ページ,前の問題,前へ,\b前.*,\b←,^<$,^(<<|≪)$,^(<|≪),(<|≪)
 " ---------------
 
 
