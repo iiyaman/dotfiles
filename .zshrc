@@ -101,6 +101,10 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
   PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
 ;
 
+#alias
+alias ta='tmux attach -t 0'
+
+
 : << COMMENTOUT
 ### Title (user@hostname) ###
 case "${TERM}" in
