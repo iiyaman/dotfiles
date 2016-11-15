@@ -1,5 +1,6 @@
-"3.8.2 (created: 2014/02/13 23:52:43)
-"updated2016/10/20
+"created: 2014/02/13 23:52:43)
+
+"updated2016/11/15
 
 " vim: set ft=vimperator:
 
@@ -7,9 +8,9 @@
 set defsearch=google
 
 "FollowHint キー指定
-set hintchars=wadfjklewcmpgh
+set hintchars=sadfjklewcmpgh
 
-" wadfjklewcmpgh
+" sadfjklewcmpgh
 " sadfwergt
 
 " shift+jkに矢印キー上下を割り当て
